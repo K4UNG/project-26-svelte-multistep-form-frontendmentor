@@ -35,6 +35,7 @@
 		background-color: var(--bg);
 		margin-bottom: 1rem;
 		cursor: pointer;
+		transition: border-color 150ms ease;
 	}
 
 	span {

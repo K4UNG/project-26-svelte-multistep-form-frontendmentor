@@ -17,18 +17,16 @@
 	}
 </script>
 
-<div class="card">
-	<div>
-		<h1>Pick add-ons</h1>
-		<p>Add-ons helps enhance your gaming experience.</p>
-		{#each data.services as service (service.id)}
-			<Service
-				on:click={() => selectService(service.id)}
-				{...service}
-				active={$serviceStore.includes(service.id)}
-			/>
-		{/each}
-	</div>
+<div>
+	<h1>Pick add-ons</h1>
+	<p>Add-ons helps enhance your gaming experience.</p>
+	{#each data.services as service (service.id)}
+		<Service
+			on:click={() => selectService(service.id)}
+			{...service}
+			active={$serviceStore.includes(service.id)}
+		/>
+	{/each}
 </div>
 
 <BottomNav next={() => goto('/addons')} back={() => goto('/plans')} />

@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
+
 	export let name: string;
 	export let description: string;
 	export let price: number;
@@ -9,7 +11,11 @@
 	<span class="inner">
 		<span class="check" class:active>
 			{#if active}
-				<img src="images/icon-checkmark.svg" alt="check mark" />
+				<img
+					src="images/icon-checkmark.svg"
+					alt="check mark"
+					transition:fade|local={{ duration: 100 }}
+				/>
 			{/if}
 		</span>
 		<span class="content">
@@ -36,6 +42,7 @@
 		align-items: center;
 		border: 1px solid var(--light-gray);
 		cursor: pointer;
+		transition: border-color 100ms ease;
 	}
 
 	.container:not(:last-child) {
@@ -74,6 +81,7 @@
 		place-items: center;
 		border-radius: 5px;
 		border: 1px solid var(--light-gray);
+		transition: background-color 100ms ease;
 	}
 
 	.check.active {

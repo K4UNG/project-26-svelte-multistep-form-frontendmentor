@@ -21,29 +21,27 @@
 	}
 </script>
 
-<div class="card">
-	<div>
-		<h1>Personal info</h1>
-		<p>Please provide your name, email address, and phone number.</p>
+<div>
+	<h1>Personal info</h1>
+	<p>Please provide your name, email address, and phone number.</p>
 
-		<CustomInput
-			label="Name"
-			placeholder="e.g. Stephen King"
-			bind:value={$userStore.name}
-			bind:error={nameErr}
-		/>
-		<CustomInput
-			label="Email Address"
-			placeholder="e.g. Stephen King"
-			bind:value={$userStore.email}
-			bind:error={emailErr}
-		/>
-		<CustomInput
-			label="Phone Number"
-			placeholder="e.g. Stephen King"
-			bind:value={$userStore.ph}
-			bind:error={phErr}
-		/>
-	</div>
+	<CustomInput
+		label="Name"
+		placeholder="e.g. Stephen King"
+		bind:value={$userStore.name}
+		bind:error={nameErr}
+	/>
+	<CustomInput
+		label="Email Address"
+		placeholder="e.g. Stephen King"
+		bind:value={$userStore.email}
+		bind:error={emailErr}
+	/>
+	<CustomInput
+		label="Phone Number"
+		placeholder="e.g. Stephen King"
+		bind:value={$userStore.ph}
+		bind:error={phErr}
+	/>
 </div>
 <BottomNav next={nextHandler} />

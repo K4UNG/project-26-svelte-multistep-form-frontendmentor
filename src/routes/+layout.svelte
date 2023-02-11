@@ -29,7 +29,9 @@
 			</li>
 		</ul>
 	</nav>
-	<slot />
+	<div class="card">
+		<slot />
+	</div>
 </div>
 
 <style>
