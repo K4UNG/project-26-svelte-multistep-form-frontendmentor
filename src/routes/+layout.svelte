@@ -30,10 +30,6 @@
 		</ul>
 	</nav>
 	<slot />
-	<div class="bottom">
-		<button class="back hidden">Go Back</button>
-		<button class="next">Next Step</button>
-	</div>
 </div>
 
 <style>
@@ -65,39 +61,5 @@
 	.num.active {
 		background-color: var(--light-blue);
 		color: var(--marine-blue);
-	}
-
-	.bottom {
-		background-color: white;
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 1rem;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.next {
-		border: 0;
-		background-color: var(--marine-blue);
-		color: white;
-		padding: 0.8rem 1rem;
-		border-radius: 5px;
-		font-size: 1rem;
-		font-weight: 500;
-	}
-
-	.back {
-		border: 0;
-		background-color: transparent;
-		font-weight: 500;
-		color: var(--cool-gray);
-	}
-
-	.back.hidden {
-		opacity: 0;
-		pointer-events: none;
 	}
 </style>
