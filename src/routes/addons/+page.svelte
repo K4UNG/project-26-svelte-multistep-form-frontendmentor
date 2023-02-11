@@ -29,4 +29,4 @@
 	{/each}
 </div>
 
-<BottomNav next={() => goto('/addons')} back={() => goto('/plans')} />
+<BottomNav next={() => goto('/summary')} back={() => goto('/plans')} />

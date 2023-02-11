@@ -1,6 +1,7 @@
 <script lang="ts">
 	export let next: () => void;
 	export let back: (() => void) | null = null;
+	export let finish = false;
 </script>
 
 <div class="bottom">
@@ -10,7 +11,7 @@
 		class="back"
 		on:click={back}>Go Back</button
 	>
-	<button class="next" on:click={next}>Next Step</button>
+	<button class="next" on:click={next} class:finish>{finish ? 'Confirm' : 'Next Step'}</button>
 </div>
 
 <style>
@@ -34,6 +35,10 @@
 		border-radius: 5px;
 		font-size: 1rem;
 		font-weight: 500;
+	}
+
+	.next.finish {
+		background-color: var(--purplish-blue);
 	}
 
 	.back {
