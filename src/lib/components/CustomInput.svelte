@@ -11,7 +11,7 @@
 
 <div class="container">
 	{#if error !== null}
-		<span transition:slide={{ duration: 100 }} class="error">{error}</span>
+		<span transition:slide|local={{ duration: 100 }} class="error">{error}</span>
 	{/if}
 	<label for={id}>{label}</label>
 	<br />

@@ -3,9 +3,10 @@
 	import BottomNav from '$lib/components/BottomNav.svelte';
 	import Plan from '$lib/components/Plan.svelte';
 	import PlanToggle from '$lib/components/PlanToggle.svelte';
+	import { planStore } from '$lib/stores/stores';
 
-	let active = 0;
-	let monthly = true;
+	$: monthly = $planStore.monthly;
+	$: active = $planStore.active;
 </script>
 
 <div class="card">
@@ -13,7 +14,7 @@
 		<h1>Select your plan</h1>
 		<p>You have the option of monthly or yearly billing.</p>
 		<Plan
-			on:click={() => (active = 0)}
+			on:click={() => ($planStore.active = 0)}
 			title="Arcade"
 			icon="images/icon-arcade.svg"
 			{monthly}
@@ -21,7 +22,7 @@
 			active={active === 0}
 		/>
 		<Plan
-			on:click={() => (active = 1)}
+			on:click={() => ($planStore.active = 1)}
 			title="Advanced"
 			icon="images/icon-advanced.svg"
 			{monthly}
@@ -29,14 +30,14 @@
 			active={active === 1}
 		/>
 		<Plan
+			on:click={() => ($planStore.active = 2)}
 			title="Pro"
 			icon="images/icon-pro.svg"
 			{monthly}
 			price={15}
 			active={active === 2}
-			on:click={() => (active = 2)}
 		/>
-		<PlanToggle bind:monthly />
+		<PlanToggle bind:monthly={$planStore.monthly} />
 	</div>
 </div>
 <BottomNav next={() => goto('/')} back={() => goto('/')} />

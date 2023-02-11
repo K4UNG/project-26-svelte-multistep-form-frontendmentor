@@ -18,7 +18,7 @@
 		<span class="title">{title}</span>
 		<span class="price">${price * (monthly ? 1 : 10)}/{monthly ? 'mo' : 'yr'}</span>
 		{#if !monthly}
-			<span transition:slide={{ duration: 100 }} class="dis">2 months free</span>
+			<span transition:slide|local={{ duration: 100 }} class="dis">2 months free</span>
 		{/if}
 	</span>
 </button>
@@ -34,6 +34,7 @@
 		gap: 1rem;
 		background-color: var(--bg);
 		margin-bottom: 1rem;
+		cursor: pointer;
 	}
 
 	span {
