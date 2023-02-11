@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	let active = $page.url.pathname;
+	$: active = $page.url.pathname;
 </script>
 
 <div>
@@ -14,7 +14,7 @@
 			</li>
 			<li>
 				<div>
-					<div class="num">2</div>
+					<div class="num" class:active={active === '/plans'}>2</div>
 				</div>
 			</li>
 			<li>
@@ -56,6 +56,7 @@
 		place-items: center;
 		border-radius: 50%;
 		font-weight: bold;
+		transition: background-color 200ms ease, color 200ms ease;
 	}
 
 	.num.active {
