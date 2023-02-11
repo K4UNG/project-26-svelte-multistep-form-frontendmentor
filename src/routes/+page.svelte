@@ -47,17 +47,3 @@
 	</div>
 </div>
 <BottomNav next={nextHandler} />
-
-<style>
-	h1 {
-		font-size: 1.75rem;
-		color: var(--marine-blue);
-	}
-
-	p {
-		margin: 1rem 0;
-		line-height: 170%;
-		font-size: 1rem;
-		color: var(--cool-gray);
-	}
-</style>

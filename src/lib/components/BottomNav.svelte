@@ -4,7 +4,12 @@
 </script>
 
 <div class="bottom">
-	<button class:hidden={back === null} class="back" on:click={back}>Go Back</button>
+	<button
+		tabindex={back === null ? -1 : 0}
+		class:hidden={back === null}
+		class="back"
+		on:click={back}>Go Back</button
+	>
 	<button class="next" on:click={next}>Next Step</button>
 </div>
 

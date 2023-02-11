@@ -19,12 +19,12 @@
 			</li>
 			<li>
 				<div>
-					<div class="num">3</div>
+					<div class="num" class:active={active === '/addons'}>3</div>
 				</div>
 			</li>
 			<li>
 				<div>
-					<div class="num">4</div>
+					<div class="num" class:active={active === '/summary'}>4</div>
 				</div>
 			</li>
 		</ul>

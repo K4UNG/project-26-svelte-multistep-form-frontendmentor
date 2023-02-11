@@ -10,3 +10,5 @@ export const planStore = writable({
 	monthly: true,
 	active: 0
 });
+
+export const serviceStore = writable<number[]>([]);
